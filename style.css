@@ -68,12 +68,12 @@ body {
 	position: fixed;
 	bottom: 1rem;
 	right: 1rem;
+	box-sizing: content-box;
 }
 .scroll-up-section .scroll-up-element {
 	border: solid #333;
 	/* border: solid #f4f4f4; */
 	border-width: 0 3px 3px 0;
-	/* border-radius: .5rem; */
 	padding: 10px;
 	display: block;
 	transform: rotate(-135deg);
