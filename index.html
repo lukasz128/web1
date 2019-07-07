@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Projekt 1</title>
 	<link rel="Stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<script>
 		window.addEventListener("DOMContentLoaded", () => {
 			const loader = document.querySelector(".loader-page");
@@ -33,9 +34,9 @@
 		<nav class="main-nav">
 			<ul class="main-list">
 				<li class="item"><a href="#articles" class="link">articles</a></li>
-				<li class="item"><a href="#contact-form" class="link">contact form</a></li>
 				<li class="item"><a href="#social-media" class="link">social media</a></li>
 				<li class="item"><a href="#about-us" class="link">about us</a></li>
+				<li class="item"><a href="#contact-form" class="link">contact form</a></li>
 				<li class="item"><a href="#gallery" class="link">gallery</a></li>
 			</ul>
 		</nav>
@@ -104,6 +105,51 @@
 			</p>
 		</article>
 
+		<article class="sections social-media-section">
+			<h2 class="title">Social Media</h2>
+
+			<div class="social-media-box">
+				<div class="social-media">
+					<a href="https://facebook.com" class="link" style="--background: #12345F; --background-hover: rgba(18, 52, 95, .7);" target="_blank">
+						<i class="fab fa-facebook-square"></i>
+					</a>
+				</div>
+				<div class="social-media">
+					<a href="https://google.com" class="links" style="--background: #4285f4; --background-hover: rgba(66, 133, 244, .7);" target="_blank">
+						<i class="fab fa-google"></i>
+					</a>
+				</div>
+				<div class="social-media">
+					<a href="https://instagram.com" class="links" style="--background: #7232bd; --background-hover: rgba(114, 50, 189, .7);" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+				<div class="social-media">
+					<a href="https://youtube.com" class="links" style="--background: #F00; --background-hover: rgba(255, 0, 0, .7);" target="_blank">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</div>
+				<div class="social-media">
+					<a href="https://linkedin.com" class="links" style="--background: #007bb5; --background-hover: rgba(0, 119, 181, .7);" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</div>
+				<div class="social-media">
+					<a href="https://twitter.com" class="links" style="--background: #1da1f2; --background-hover: rgba(29, 161, 242, .7);" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</div>
+			</div>
+		</article>
+
+		<article class="sections about-us">
+			<h2 class="title">About Us</h2>
+			<p class="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, possimus hic laborum voluptatibus numquam dolore soluta, sequi maiores modi laboriosam pariatur officiis esse veniam dolor nam, nesciunt ratione cumque aliquid.
+			</p>
+			<button>Contact With Us</button>
+		</article>
+	
 		<article class="contact-form sections">
 			<h2 class="title"> contact with us </h2>
 
@@ -142,6 +188,10 @@
 					<button class="btn primary-btn">SUBMIT</button>
 				</form>
 			</div>
+		</article>
+
+		<article class="sections gallery">
+			<div class="gallery-box"></div>
 		</article>
 	</main>
 

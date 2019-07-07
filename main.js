@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const navLinks = document.querySelectorAll(".link");
 	const sections = document.querySelectorAll(".sections");
-	const scrollUpElement = document.querySelector(".scroll-up-element");
+	const scrollUpElement = document.querySelector(".scroll-up-section");
 	const contantUsForm = document.forms["contact-form"];
 
 	new Navigation(navLinks, sections, scrollUpElement);
