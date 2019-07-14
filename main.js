@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	new Navigation(navLinks, sections, scrollUpElement);
 	new ValidateContactForm(contantUsForm, {});
-	new Gallery();
 	new CharacterCounter(contantUsForm.elements[2]);
 });
 
@@ -187,8 +186,4 @@ class CharacterCounter {
 		return this.counter.innerHTML = this.inputMaxLength - this.input.value.length;
 	}
 }
-class Gallery {	
-	constructor() {
-		console.log('gallery');
-	}
-}
+

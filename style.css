@@ -58,7 +58,7 @@ body {
 
 /* Showcase */
 .showcase {
-	background: url("showcase.jpeg") no-repeat fixed  center / cover;
+	background: url("images/showcase.jpeg") no-repeat fixed  center / cover;
 	overflow: hidden;
 	height: 100vh;
 	display: flex;
@@ -67,6 +67,20 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-shadow: 3px -3px 5px #000;
+}
+.showcase:before {
+	content: "";
+	position: absolute;
+	margin: auto;
+	width: 2rem;
+	height: 2rem;
+	font-size: 0;
+	z-index: -1;
+	border-radius: 100%;
+	border: 1rem solid #333;
+	border-top: 1rem solid #F4F4F4;
+	border-bottom: 1rem solid #F4F4F4;
+	animation: load-animation 750ms infinite linear;
 }
 .showcase > .title {
 	font-size: 4rem;
