@@ -3,25 +3,28 @@ document.addEventListener("DOMContentLoaded", () => {
 	const navLinks = document.querySelectorAll(".link");
 	const sections = document.querySelectorAll(".sections");
 	const scrollUpElement = document.querySelector(".scroll-up-section");
+	const scrollDownElement = document.querySelector(".visit-element");
 	const contantUsForm = document.forms["contact-form"];
 	const map = document.querySelector(".map");
 
-	new Navigation(navLinks, sections, scrollUpElement);
+	new Navigation(navLinks, sections, scrollUpElement, scrollDownElement);
 	new ValidateContactForm(contantUsForm, {});
 	new CharacterCounter(contantUsForm.elements[2]);
-	new Localization(map, {lat: -25.344, lng: 131.036});
+	new Localization(map, {lat: 47.467537, lng: -122.173134}, 12);
 });
 
 
 
 class Navigation {
-	constructor(links, sections, scrollUpElement) {
+	constructor(links, sections, scrollUpElement, scrollDownElement) {
 		this.links = [... links];
 		this.sections = [... sections];
 		this.scrollUpElement = scrollUpElement;
+		this.scrollDownElement = scrollDownElement;
 		
 		this.bindClickScrollToContent();
 		this.bindClickScrollToUp(this.scrollUpElement);
+		this.bindClickScollToDown(this.scrollDownElement);
 	}
 	bindClickScrollToContent(){
 		this.links.forEach((element, index) => {
@@ -52,6 +55,18 @@ class Navigation {
 	}
 	isScrollDown() {
 		return window.pageYOffset > 500;
+	}
+	bindClickScollToDown(element) {
+		this.scrollDownEventClick(element);
+	}
+	scrollDownEventClick(element) {
+		element.addEventListener("click", () => this.scrollToDown() );
+	}
+	scrollToDown() {
+		window.scrollTo({
+			'behavior': 'smooth',
+			'top': this.sections[2].offsetTop
+		});
 	}
 }
 
@@ -185,7 +200,7 @@ class CharacterCounter {
 		return this.counter.innerHTML < 15 ? this.counter.style.color = "#F00" : this.counter.style.color = "grey";
 	}
 	setCounterValue() {
-		return this.counter.innerHTML = this.inputMaxLength - this.input.value.length;
+		return this.counter.textContent = this.inputMaxLength - this.input.value.length;
 	}
 }
 

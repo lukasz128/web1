@@ -4,24 +4,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<title>Projekt 1</title>
 	<link rel="Stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"> -->
 	<script>
 		window.addEventListener("DOMContentLoaded", () => {
 			const loader = document.querySelector(".loader-page");
+			loader.classList.remove("no-js");
 			loader.className += " hidden";
 		});
 	</script>
 	<script defer  src="main.js"></script>
-	<script defer
+	<!-- <script defer
 		src="https://maps.googleapis.com/maps/api/js?key=
 		AIzaSyCtx1AX8BsjuIP1nUBekkZz1jRW3EdFGn4
 		&callback=initMap">
-	</script>
+	</script> -->
 </head>
 <body>
-	<section class="loader-page">
+	<section class="loader-page no-js">
 		<div class="loader"></div>
 	</section>
 
@@ -39,7 +41,6 @@
 		<nav class="main-nav">
 			<ul class="main-list">
 				<li class="item"><a href="#articles" class="link">articles</a></li>
-				<li class="item"><a href="#social-media" class="link">social media</a></li>
 				<li class="item"><a href="#contact-form" class="link">contact form</a></li>
 				<li class="item"><a href="#about-us" class="link">about us</a></li>
 			</ul>
@@ -81,20 +82,6 @@
 
 		<article class="article">
 			<h2 class="title">Example Title Of Article</h2>
-			<p class="content-of-article">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit lacus, fermentum sed euismod eget, condimentum vitae orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis aliquet tellus massa, sit amet suscipit ligula elementum ut. Nullam faucibus finibus justo, ac pellentesque nunc dictum in. In sed arcu eget purus imperdiet sodales lobortis eget lectus. Vestibulum congue convallis lorem at pretium. Vestibulum nec mauris urna. Nullam eu tincidunt dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet elementum semper. Vestibulum cursus, eros quis aliquam dapibus, ligula urna ultrices lacus, eget imperdiet enim tortor et elit. Curabitur ultricies efficitur lorem non rutrum. Fusce risus augue, ullamcorper ut enim ut, accumsan sollicitudin diam. Quisque ut aliquam nisi. Ut elit diam, imperdiet a dignissim fermentum, convallis nec nisl. Quisque tristique diam arcu, eget lacinia odio venenatis nec. Curabitur scelerisque auctor velit pretium auctor. Nam id tempus nibh. 
-			</p>
-		</article>
-
-		<article class="article">
-			<h2 class="title">Example Title Of Article</h2>
-			<p class="content-of-article">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit lacus, fermentum sed euismod eget, condimentum vitae orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis aliquet tellus massa, sit amet suscipit ligula elementum ut. Nullam faucibus finibus justo, ac pellentesque nunc dictum in. In sed arcu eget purus imperdiet sodales lobortis eget lectus. Vestibulum congue convallis lorem at pretium. Vestibulum nec mauris urna. Nullam eu tincidunt dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet elementum semper. Vestibulum cursus, eros quis aliquam dapibus, ligula urna ultrices lacus, eget imperdiet enim tortor et elit. Curabitur ultricies efficitur lorem non rutrum. Fusce risus augue, ullamcorper ut enim ut, accumsan sollicitudin diam. Quisque ut aliquam nisi. Ut elit diam, imperdiet a dignissim fermentum, convallis nec nisl. Quisque tristique diam arcu, eget lacinia odio venenatis nec. Curabitur scelerisque auctor velit pretium auctor. Nam id tempus nibh. 
-			</p>
-		</article>
-
-		<article class="article">
-			<h2 class="title">Example Title Of Article</h2>
 			<img src="images/article-image1.jpeg" alt="mountain" title="mountain" class="image-in-article image-in-article-left">
 			<p class="content-of-article">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit lacus, fermentum sed euismod eget, condimentum vitae orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis aliquet tellus massa, sit amet suscipit ligula elementum ut. Nullam faucibus finibus justo, ac pellentesque nunc dictum in. In sed arcu eget purus imperdiet sodales lobortis eget lectus. Vestibulum congue convallis lorem at pretium. Vestibulum nec mauris urna. Nullam eu tincidunt dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet elementum semper. Vestibulum cursus, eros quis aliquam dapibus, ligula urna ultrices lacus, eget imperdiet enim tortor et elit. Curabitur ultricies efficitur lorem non rutrum. Fusce risus augue, ullamcorper ut enim ut, accumsan sollicitudin diam. Quisque ut aliquam nisi. Ut elit diam, imperdiet a dignissim fermentum, convallis nec nisl. Quisque tristique diam arcu, eget lacinia odio venenatis nec. Curabitur scelerisque auctor velit pretium auctor. Nam id tempus nibh. 
@@ -107,43 +94,6 @@
 			<p class="content-of-article">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit lacus, fermentum sed euismod eget, condimentum vitae orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis aliquet tellus massa, sit amet suscipit ligula elementum ut. Nullam faucibus finibus justo, ac pellentesque nunc dictum in. In sed arcu eget purus imperdiet sodales lobortis eget lectus. Vestibulum congue convallis lorem at pretium. Vestibulum nec mauris urna. Nullam eu tincidunt dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet elementum semper. Vestibulum cursus, eros quis aliquam dapibus, ligula urna ultrices lacus, eget imperdiet enim tortor et elit. Curabitur ultricies efficitur lorem non rutrum. Fusce risus augue, ullamcorper ut enim ut, accumsan sollicitudin diam. Quisque ut aliquam nisi. Ut elit diam, imperdiet a dignissim fermentum, convallis nec nisl. Quisque tristique diam arcu, eget lacinia odio venenatis nec. Curabitur scelerisque auctor velit pretium auctor. Nam id tempus nibh. 
 			</p>
-		</article>
-
-		<article class="sections social-media-section">
-			<h2 class="title">Social Media</h2>
-
-			<div class="social-media-box">
-				<div class="social-media">
-					<a href="https://facebook.com" class="link" style="--background: #12345F; --background-hover: rgba(18, 52, 95, .7);" target="_blank">
-						<i class="fab fa-facebook-square"></i>
-					</a>
-				</div>
-				<div class="social-media">
-					<a href="https://google.com" class="links" style="--background: #4285f4; --background-hover: rgba(66, 133, 244, .7);" target="_blank">
-						<i class="fab fa-google"></i>
-					</a>
-				</div>
-				<div class="social-media">
-					<a href="https://instagram.com" class="links" style="--background: #7232bd; --background-hover: rgba(114, 50, 189, .7);" target="_blank">
-						<i class="fab fa-instagram"></i>
-					</a>
-				</div>
-				<div class="social-media">
-					<a href="https://youtube.com" class="links" style="--background: #F00; --background-hover: rgba(255, 0, 0, .7);" target="_blank">
-						<i class="fab fa-youtube"></i>
-					</a>
-				</div>
-				<div class="social-media">
-					<a href="https://linkedin.com" class="links" style="--background: #007bb5; --background-hover: rgba(0, 119, 181, .7);" target="_blank">
-						<i class="fab fa-linkedin"></i>
-					</a>
-				</div>
-				<div class="social-media">
-					<a href="https://twitter.com" class="links" style="--background: #1da1f2; --background-hover: rgba(29, 161, 242, .7);" target="_blank">
-						<i class="fab fa-twitter"></i>
-					</a>
-				</div>
-			</div>
 		</article>
 
 		<article class="contact-form sections">
@@ -178,17 +128,20 @@
 						<div class="warning-icon-box">
 							<img class="warning-icon hidden-warning-icon" src="warning-icon_.png">
 						</div>
-						<span class="counter">500</span>
+						<span class="counter">Max Lenght 500</span>
 					</label>
 
 					<button class="btn primary-btn">SUBMIT</button>
 				</form>
 
-				<span class=""> or visit us </span>
+				<div class="visit-element cant-copy"> 
+					or visit us 
+					<span>arrow down</span>
+				</div>
 			</div>
 		</article>
 
-		<article class="sections about-us">
+		<article class="sections about-us" id="about-us">
 			<div class="information">
 				<dl class="info-list">
 					<dt class="title-item"> ADDRESS </dt>
@@ -206,7 +159,33 @@
 
 
 	<footer class="main-footer">
-		<span class="author"> &copy;&nbsp;Łukasz&nbsp;Fereniec</span>
+		<div class="footer-box">
+			<div class="author-section">
+				<span class="author"> &copy;&nbsp;Łukasz&nbsp;Fereniec</span>
+			</div>
+			<div class="social-media-box">
+				<div class="social-media">
+					<a href="https://facebook.com" class="links" style="--background: #12345F; --background-hover: rgba(18, 52, 95, .7);" target="_blank">
+						<i class="fab fa-facebook-square"></i>
+					</a>		
+				</div>
+				<div class="social-media">
+					<a href="https://linkedin.com" class="links" style="--background: #007bb5; --background-hover: rgba(0, 119, 181, .7);" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</div>
+				<div class="social-media">
+					<a href="https://youtube.com" class="links" style="--background: #F00; --background-hover: rgba(255, 0, 0, .7);" target="_blank">
+						<i class="fab fa-youtube"></i>
+					</a>
+				</div>
+				<div class="social-media">
+					<a href="https://instagram.com" class="links" style="--background: #7232bd; --background-hover: rgba(114, 50, 189, .7);" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+				</div>
+			</div>
+		</div>
 	</footer>
 </body>
 </html>
