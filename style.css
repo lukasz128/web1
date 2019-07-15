@@ -57,6 +57,10 @@ body {
 	display: block;
 	transform: rotate(-135deg);
 	margin: .5rem auto;
+	transition: margin 250ms;
+}
+.scroll-up-section:hover .scroll-up-element {
+	margin: 0 auto;
 }
 
 /* Showcase */
@@ -341,13 +345,27 @@ body {
 	box-shadow: 0px 0px 6px #F4F4F4;
 }
 .visit-element {
-	padding-top: 2rem;
-	padding-bottom: 4rem;
+	margin-top: 2rem;
+	margin-bottom: 6rem;
 	font-size: 1.2rem;
 	cursor: pointer;
 	font-style: italic;
-	word-spacing: .3rem;
+	word-spacing: .2rem;
 	display: inline-block;
+	animation: none;
+}
+.visit-element > .arrow-down {
+	content: "";
+	border: solid #F4F4F4;
+	border-width: 0 3px 3px 0;
+	padding: 10px;
+	display: inline-block;
+	transform: rotate(45deg);
+	margin-left: 1rem;
+}
+.arrow-down:hover {
+	/* To Do */
+	animation: arrow-down-animate 1000ms;
 }
 /* About us */
 .about-us {
@@ -365,6 +383,7 @@ body {
 	height: 400px;
 	width: 50%;
 	display: flex;
+	position: relative;
 }
 .about-us .map:before {
 	content: "";
@@ -377,6 +396,12 @@ body {
 	border-top: 1rem solid #F4F4F4;
 	border-bottom: 1rem solid #F4F4F4;
 	animation: load-animation 750ms infinite linear;
+}
+.about-us .map:after {
+	content: attr(data-alt);
+	position: absolute;
+	top: 48%;
+	left: 57%
 }
 .about-us .information .info-list {
 	margin: 0;
@@ -405,10 +430,8 @@ body {
 .main-footer .footer-box {
 	display: flex;
 	flex-direction: row;
-	/* justify-content: center; */
 }
 .main-footer .footer-box .author-section {
-/* .main-footer .footer-box .social-media-box { */
 	width: 70%;
 	text-align: center;
 }
@@ -502,6 +525,11 @@ a {
 	  40%, 60% {
 		transform: translate3d(4px, 0, 0);
 	  }
+}
+@keyframes arrow-down-animate {
+	0% { margin: 0 auto; }
+	25% { margin: 2rem auto; }
+	/* To Do */
 }
 
 /* classes for JS */
