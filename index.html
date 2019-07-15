@@ -13,7 +13,12 @@
 			loader.className += " hidden";
 		});
 	</script>
-	<script defer src="main.js"></script>
+	<script defer  src="main.js"></script>
+	<script defer
+		src="https://maps.googleapis.com/maps/api/js?key=
+		AIzaSyCtx1AX8BsjuIP1nUBekkZz1jRW3EdFGn4
+		&callback=initMap">
+	</script>
 </head>
 <body>
 	<section class="loader-page">
@@ -179,15 +184,23 @@
 					<button class="btn primary-btn">SUBMIT</button>
 				</form>
 
-				<span> or visit us </span>
+				<span class=""> or visit us </span>
 			</div>
 		</article>
 
 		<article class="sections about-us">
-			<h2 class="title">About Us</h2>
-			<p class="content">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, possimus hic laborum voluptatibus numquam dolore soluta, sequi maiores modi laboriosam pariatur officiis esse veniam dolor nam, nesciunt ratione cumque aliquid.
-			</p>
+			<div class="information">
+				<dl class="info-list">
+					<dt class="title-item"> ADDRESS </dt>
+					<dd class="info-item">  1961 Willow Greene Drive </dd>
+					<dd class="info-item"> Opelika Alabama</dd>
+					<dt class="title-item"> OFFICE HOURS </dt>
+					<dd class="info-item">Mondey - Friday</dd>
+					<dd class="info-item">8.00am - 5.00pm</dd>
+				</dl>
+			</div>
+			
+			<div class="map"></div>
 		</article>
 	</main>
 

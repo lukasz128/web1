@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	const sections = document.querySelectorAll(".sections");
 	const scrollUpElement = document.querySelector(".scroll-up-section");
 	const contantUsForm = document.forms["contact-form"];
+	const map = document.querySelector(".map");
 
 	new Navigation(navLinks, sections, scrollUpElement);
 	new ValidateContactForm(contantUsForm, {});
 	new CharacterCounter(contantUsForm.elements[2]);
+	new Localization(map, {lat: -25.344, lng: 131.036});
 });
 
 
@@ -187,3 +189,15 @@ class CharacterCounter {
 	}
 }
 
+class Localization {
+	constructor(map, cord, zoom = 4) {
+		this.map = map;
+		this.cord = cord;
+		this.zoom = zoom;
+		this.initMap();
+	}
+	initMap() {
+		new google.maps.Map(this.map, {zoom: this.zoom, center: this.cord });
+		new google.maps.Marker({position: this.cord, map: this.map});
+	}
+}

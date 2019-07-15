@@ -58,7 +58,7 @@ body {
 
 /* Showcase */
 .showcase {
-	background: url("images/showcase.jpeg") no-repeat fixed  center / cover;
+	background: url("images/showcase.jpg") no-repeat fixed  center / cover;
 	overflow: hidden;
 	height: 100vh;
 	display: flex;
@@ -390,6 +390,33 @@ body {
 /* About us */
 .about-us {
 	margin: 3rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.about-us > .information {
+	width: 25%;
+}
+.about-us .map{
+	height: 400px;
+	width: 50%;
+}
+.about-us .information .info-list {
+	margin: 0;
+	margin-right: 2rem;
+}
+.about-us .information .info-list > * {
+	padding: 1rem 0;
+	text-align: right;
+}
+.about-us .information .info-list .title-item {
+	font-weight: bold;
+	font-size: 1.2rem;	
+	text-decoration: underline aqua;	
+}
+.about-us .information .info-list .info-item {
+	margin: 0;
 }
 
 
