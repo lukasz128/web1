@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	new Navigation(navLinks, sections, scrollUpElement, scrollDownElement);
 	new ValidateContactForm(contantUsForm, {});
 	new CharacterCounter(contantUsForm.elements[2]);
-	new Localization(map, {lat: 47.467537, lng: -122.173134}, 12);
+	new Localization(map, {lat: 47.467537, lng: -122.173134}, 10);
 });
 
 
