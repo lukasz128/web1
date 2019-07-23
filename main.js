@@ -54,7 +54,7 @@ class Navigation {
 		});	
 	}
 	isScrollDown() {
-		return window.pageYOffset > 500;
+		return window.pageYOffset > 300;
 	}
 	bindClickScollToDown(element) {
 		this.scrollDownEventClick(element);
