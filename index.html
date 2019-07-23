@@ -5,7 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
-	<title>Projekt 1</title>
+	<meta name="author" content="Łukasz Fereniec"> 
+	<meta name="keywords" content="mountain">
+	<meta name="description" content="Project number 1 ">
+	<title>Project 1</title>
 	<link rel="Stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 	<script>
@@ -33,34 +36,17 @@
 
 
 	<header class="showcase">
-
-		<div class="responsive-menu-box">
-			<span href="#menu" class="responsive-menu cant-copy">|||</span>
-		</div>
-
 		<nav class="main-nav">
-			<input type="checkbox" id="checkbox-mobile">
-			<div>
-				<div class="mobile-menu-box">
-					<label class="mobile-menu" for="checkbox-mobile">
-						<span></span>
-						<span></span>
-						<span></span>
-					</label>
-				</div>
-				<div class="mobile-menu-list">
-				</div>
-				<ul class="main-list">
-					<li class="item"><a href="#articles" class="link">articles</a></li>
-					<li class="item"><a href="#contact-form" class="link">contact form</a></li>
-					<li class="item"><a href="#about-us" class="link">about us</a></li>
-				</ul> 
-			</div>
+			<ul class="main-list cant-copy">
+				<li class="item"><a href="#articles" class="link">articles</a></li>
+				<li class="item"><a href="#contact-form" class="link">contact form</a></li>
+				<li class="item"><a href="#about-us" class="link">about us</a></li>
+			</ul> 
 		</nav>
 
 		<h1 class="title"> Title Example </h1>
-		<p>	
-			Sample Describe of Page | Projekt 1
+		<p class="describe">	
+			Sample Describe of Page | Project 1
 		</p>
 	</header>
 
@@ -97,29 +83,20 @@
 					<label class="cant-copy inputs-box">
 						<input type="text" class="inputs" pattern="^[A-ZĘÓĄŚŻŹĆŁa-zęóążźćśćł0-9 ]{3,50}$" placeholder=" "  required>
 						<span class="placeholder">Name</span>
-						<span class="warning-suggestion hidden-warning-suggestion">This syntax is bad. You can use letters, numbers, space and from 3 to 50 characters.</span>
-						<div class="warning-icon-box">
-							<img class="warning-icon hidden-warning-icon" src="warning-icon_.png">
-						</div>
+						<span class="warning-suggestion hidden-warning-suggestion">You can use letters/numbers/space (3-50 characters)</span>
 					</label>
 				
 					<label class="cant-copy inputs-box">
 						<input type="email" class="inputs"  pattern="^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$" placeholder=" "  required>
 						<span class="placeholder">Email</span>
 						<span class="warning-suggestion hidden-warning-suggestion">Use the correct email syntax.</span>
-						<div class="warning-icon-box">
-							<img class="warning-icon hidden-warning-icon" src="warning-icon_.png">
-						</div>
 					</label>
 						
 					
 					<label class="cant-copy inputs-box">
-						<textarea class="message-area inputs" pattern="^[A-ZĘÓĄŚŻŹĆŁa-zęóążźćśćł0-9.,-_ \n]{3,500}$" placeholder=" " maxlength="500" required ></textarea>
+						<textarea class="message-area inputs" pattern="^[A-ZĘÓĄŚŻŹĆŁa-zęóążźćśćł0-9.,-_ \n]{3,500}$" placeholder=" " data-moment-warning="15" maxlength="500" required ></textarea>
 						<span class="placeholder">Content</span>
 						<span class="warning-suggestion hidden-warning-suggestion">This syntax is bad. Do not use special characters.</span>
-						<div class="warning-icon-box">
-							<img class="warning-icon hidden-warning-icon" src="warning-icon_.png">
-						</div>
 						<span class="counter">Max Lenght 500</span>
 					</label>
 

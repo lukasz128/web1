@@ -174,8 +174,9 @@ class CharacterCounter {
 	constructor(input) {
 		this.input = input;
 		this.label = this.input.parentNode;
-		this.counter = this.label.childNodes[9];
+		this.counter = this.label.childNodes[7];
 		this.inputMaxLength = this.input.getAttribute("maxlength");
+		this.momentWarning = parseInt(this.input.getAttribute("data-moment-warning"));
 
 		this.init();
 	}
@@ -184,10 +185,7 @@ class CharacterCounter {
 		this.changeAfterLoadEvent();
 	}
 	changeAfterInputEvent() {
-		this.input.addEventListener('input', () => {
-			this.setCounterColor();
-			this.setCounterValue();
-		});
+		this.input.addEventListener('input', () => this.counterChanges());
 	}
 	changeAfterLoadEvent() {
 		window.addEventListener("load", this.counterChanges());
@@ -197,7 +195,7 @@ class CharacterCounter {
 		this.setCounterValue();		
 	}
 	setCounterColor() {
-		return this.counter.innerHTML < 15 ? this.counter.style.color = "#F00" : this.counter.style.color = "grey";
+		return this.counter.innerHTML <= this.momentWarning ? this.counter.style.color = "#F00" : this.counter.style.color = "#AAA";
 	}
 	setCounterValue() {
 		return this.counter.textContent = this.inputMaxLength - this.input.value.length;
