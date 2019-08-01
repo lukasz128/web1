@@ -4,13 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	const sections = document.querySelectorAll(".sections");
 	const scrollUpElement = document.querySelector(".scroll-up-section");
 	const scrollDownElement = document.querySelector(".visit-element");
-	const contantUsForm = document.forms["contact-form"];
+	const contantUsForm = document.forms[0];
 	const map = document.querySelector(".map");
+	const images = document.querySelectorAll(".image-in-article");
 
 	new Navigation(navLinks, sections, scrollUpElement, scrollDownElement);
 	new ValidateContactForm(contantUsForm, {});
 	new CharacterCounter(contantUsForm.elements[2]);
 	new Localization(map, {lat: 47.467537, lng: -122.173134}, 10);
+	new LazyLoadImages(images);
 });
 
 
@@ -25,12 +27,13 @@ class Navigation {
 		this.bindClickScrollToContent();
 		this.bindClickScrollToUp(this.scrollUpElement);
 		this.bindClickScollToDown(this.scrollDownElement);
+
 	}
 	bindClickScrollToContent(){
 		this.links.forEach((element, index) => {
 			element.addEventListener('click', e => {
 				e.preventDefault();
-				this.scrollToContent(this.sections[index])
+				this.scrollToContent(this.sections[index]);
 			});
 		});
 	}
@@ -40,12 +43,15 @@ class Navigation {
 			'top': element.offsetTop	
 		});
 	}
+	// setUrl(index) {
+	// 	return setTimeout(() => window.location.replace(this.links[index].href), 500);
+	// }
 	bindClickScrollToUp(element) {
 		this.scrollUpEventClick(element);
 		window.addEventListener("scroll", () => this.isScrollDown() ? element.classList.add("show-scroll-up-element") : element.classList.remove("show-scroll-up-element"));
 	}
 	scrollUpEventClick(element) {
-		element.addEventListener("click", () => this.scrollToUp() );
+		element.addEventListener("click", this.scrollToUp);
 	}
 	scrollToUp() {
 		window.scrollTo({
@@ -212,5 +218,32 @@ class Localization {
 	initMap() {
 		new google.maps.Map(this.map, {zoom: this.zoom, center: this.cord });
 		new google.maps.Marker({position: this.cord, map: this.map});
+	}
+}
+
+class LazyLoadImages {
+	constructor(images) {
+		this.images = [... images];
+		this.init();
+	}
+	init() {
+		this.images.forEach(target => {
+			const io = new IntersectionObserver((entries, observer) => {
+		
+				entries.forEach(entry => {
+					if(entry.isIntersecting) {
+						const img = entry.target;
+						const src = img.dataset.src;
+
+						img.setAttribute('src', src);
+						img.classList.add('fade');
+
+						observer.disconnect();
+					}
+					
+				});
+			});
+			io.observe(target);
+		});
 	}
 }

@@ -20,9 +20,6 @@ body {
 	overflow: hidden;
 	z-index: 999;
 }
-.loader-page.no-js {
-	display: none;
-}
 .loader-page .loader {
 	background-color: inherit;
 	width: 12rem;
@@ -48,6 +45,7 @@ body {
 	box-sizing: content-box;
 	cursor: pointer;
 	opacity: 0;
+	pointer-events: none;
 	z-index: 998;
 }
 .scroll-up-section .scroll-up-element {
@@ -170,7 +168,12 @@ body {
 	padding-bottom: 0;
 	display: flex;
 	position: relative;
+	opacity: 0;
 }
+.image-in-article.fade {
+	animation: fade-in 500ms forwards;
+}
+
 .image-in-article:before {
 	content: "";
 	margin: auto;
@@ -188,7 +191,6 @@ body {
 	position: absolute;
 	left: calc(50% - 2rem);
 	top: calc(50% + 2.2rem);
-
 }
 .image-in-article[data-image-position="left"] {
 	float: left;
@@ -485,7 +487,7 @@ a {
 }
 @keyframes fade-in {
 	100% {
-		opacity: .8;
+		opacity: 1;
 		visibility: visible;
 	}
 }
@@ -504,11 +506,15 @@ a {
 }
 
 /* classes for JS */
+.no-js {
+	display: none;
+}
 .loader-page.hidden {
 	animation: fade-out 1s forwards;
 }
 .show-scroll-up-element {
 	animation: fade-in 1s forwards;
+	pointer-events: all;
 }
 .error-input {
 	border-color: #F00;
@@ -558,7 +564,7 @@ a {
 		margin: 0;
 	}
 	.inputs-box {
-		margin: .5rem 0;
+		margin: .3rem 0;
 	}
 	.warning-suggestion {
 		top: 1.9rem;
